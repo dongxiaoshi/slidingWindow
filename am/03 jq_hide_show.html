@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			body {
+				font-size: 15px;
+				line-height: 20px;
+				padding: 0;
+			}
+			#panel {
+				border: 1px solid red;
+				width: 500px;
+				margin: 0 auto;
+			}
+			.head {
+				padding: 5px;
+				background-color: lightcoral;
+				cursor: pointer;
+			}
+			
+			.content {
+				padding: 10px;
+				text-indent: 2em;
+				border: 1px solid blue;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div id="panel">
+			<h3 class="head">联通大数据公司荣膺全国抗击新冠肺炎疫情先进集体</h3>
+			<div class="content">
+				新冠肺炎疫情发生后，中国联通坚决落实党中央、国务院决策部署，切实履行通信企业责任，充分发挥大数据和通信网络技术优势，全力以赴支撑疫情防控。联通大数据公司在中国联通集团公司党组直接领导下展开行动，充分发挥运营商大数据、AI等能力和技术优势，持续为全国疫情防控和复工复产提供有力支撑。
+			</div>
+		</div>
+		
+		
+	</body>
+	<script src="../js/jquery-1.3.1.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.head').toggle(function(){
+				$(".content").hide(1000);
+			},function(){
+				$(".content").show(1000);
+			})
+		})
+	</script>
+</html>

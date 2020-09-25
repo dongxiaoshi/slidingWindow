@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		$   === jQuery
+			构造函数
+			返回类数组
+			对js进行封装的类库
+		
+		作用：
+			操作元素，操作属性，操作样式
+			
+			选择器：
+					标签、类、id、通用
+					群组、后代 > +
+					[attr] [attr=] [attr!=] [attr^=]
+					:nth  :first-child :last-child
+			过滤器选择器：
+					:first :last :not() :even :odd
+					:eq() :gt() :lt() ->下标
+					:contains(txt) :empty :has()
+					:hidden :visible
+			表单过滤器：
+					:input   --> input textare select button
+					:text :password :radio :checkbox :submit
+					:reset :file  :image :button :hidden
+					:enable :disable :checked :selected
+					
+		事件
+			事件名去掉on
+			
+			$(sel).click(function(){});
+			$(sel).bind("click mouseover",function(){});
+			$(this)
+			
+			js   
+				xxx.onclick="";
+				xxx.addEventListener("click",function(){})
+				xxx.removeEventListener("click",function(){})
+				
+				xxx.attachEvent('onclick',function(){})
+				xxx.detachEvent('onclick',function(){})
+			
+			
+			dbclick
+			focus
+			blur
+			focusin 自己或子元素获得焦点
+			focusout 自己或子元素失去焦点
+			change
+			
+			keydown keypress keyup
+			
+			mousedown up 
+			mouseenter mouseover mousemove mouseleave mouseout
+				mouseover:事件 在鼠标指针进入被选元素或者任意子元素时都会被触发
+				mouseenter:   只有在鼠标指针进入被选元素时触发
+				mouseout:  在鼠标指针离开被选元素或任意子元素时都会被触发
+				mouseleave: 只有在鼠标指针离开被选元素时被触发
+				
+			scroll
+			select
+			submit
+			resize
+			
+			bind
+					$("#btn").bind("click dblclick",function(){
+						location.href = "index.html";
+					});
+			unbind
+					$("#btn").unbind() //如果括号里什么都不写，代表移除所有
+					
+			**delegate 
+					给孩子、未来的孩子批量添加事件
+					$(selector).delegate(childSelector,event,data,function)
+					
+					$("div").delegate("p","click",function(){
+						$("p").css("background-color","red");
+					});
+					
+			hover  
+					mouseenter
+					mouseleave
+			
+			ready -- 替换window.onload
+					$(document).ready(function(){
+						
+					})
+					$(function(){})
+					
+			DOM操纵
+					$('<li>4</li>')
+						add
+						andSelf()
+						$("div").find("p").andSelf().addClass("border");
+						
+					
+					append
+					remove
+					clone
+					
+					addClass('active')  removeClass toggleClass
+					
+					html() html('abc')
+					text() text('ddd')
+					val()  val('aa')
+					attr('src') attr('src','img/aa.png') removeAttr('title')
+					prop('')
+					
+					css('color') css('color','red') css({"":"","":"",....})
+					
+			DOM遍历
+					each()
+					parent() parents()
+					children() 
+					siblings()
+					next() nextAll() nextUntil()
+					prev() prevAll() prevUntil()
+					is() has() find() 
+					hide() show()
+					
+			DOM遍历和数组的遍历
+					$().each(function(){});
+					$.each(arr,function(k,v){});
+			
+			
+		动画：
+				slideUp  slideDown slideToggle
+				fadeIn   fadeOut   fadeToggle
+				
+				animate(x,y,z)
+						x:样式{}
+						y:time
+						z:function(){}  -->可有可无
+				
+				
+				动画队列
+						$(sel).animate({},time,function(){});
+						$(sel).animate({},time,function(){});
+						$(sel).animate({},time,function(){});
+						......
+			
+				停止动画
+						$(sel).stop()
+			
+			
+			
+			
+	</body>
+</html>
